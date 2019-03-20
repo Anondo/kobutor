@@ -38,6 +38,7 @@ func registerRoutes() {
 func mailHandlers() http.Handler {
 	h := chi.NewRouter()
 	h.Group(func(r chi.Router) {
+		r.Use(api.BasicAuth)
 		h.Post("/", api.SendMail)
 	})
 

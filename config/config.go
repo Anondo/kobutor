@@ -14,4 +14,6 @@ func Init() {
 	if err := viper.ReadInConfig(); err != nil {
 		log.Fatal("Failed to read config file")
 	}
+
+	loadAuth()
 }
