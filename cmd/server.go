@@ -13,6 +13,7 @@ import (
 )
 
 var (
+	// ServerCmd ...
 	ServerCmd = &cobra.Command{
 		Use:   "server",
 		Short: "Starts the kobutor server",
@@ -21,7 +22,7 @@ var (
 )
 
 func init() {
-	ServerCmd.Flags().IntP("port", "p", viper.GetInt("default.port"), "The port to run the kobutor server on")
+	ServerCmd.Flags().IntP("port", "p", viper.GetInt("app.port"), "The port to run the kobutor server on")
 	viper.BindPFlag("port", ServerCmd.Flags().Lookup("port"))
 
 }
