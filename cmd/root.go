@@ -18,6 +18,7 @@ var (
 func init() {
 	config.Init()
 	RootCmd.AddCommand(ServerCmd)
+	RootCmd.AddCommand(SendCmd)
 }
 
 // Execute executes the root command
