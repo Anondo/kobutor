@@ -12,7 +12,7 @@ func loadAuth() {
 	auth = viper.GetStringMapString("auth")
 }
 
-// GetAuth returns the authentications map
-func GetAuth(id string) string {
-	return auth[strings.ToLower(id)]
+// GetAuthPassword returns the password of the username provided in the parameter
+func GetAuthPassword(uname string) string {
+	return auth[strings.ToLower(uname)]
 }
