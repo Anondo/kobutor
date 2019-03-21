@@ -1,6 +1,7 @@
 package api
 
 import (
+	"kobutor/helper"
 	"net/http"
 
 	"kobutor/service"
@@ -12,7 +13,7 @@ import (
 func SendMail(w http.ResponseWriter, r *http.Request) {
 	sr := service.SendGridRequest{}
 
-	if err := parseBody(r.Body, &sr); err != nil {
+	if err := helper.ParseBody(r.Body, &sr); err != nil {
 		renderer.New().JSON(w, http.StatusBadRequest, renderer.M{
 			"message": "Invalid request data",
 			"error":   err,
