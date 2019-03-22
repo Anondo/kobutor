@@ -22,7 +22,7 @@ func init() {
 	SendCmd.Flags().StringP("to", "t", "", "the email address of the receiver")
 	SendCmd.Flags().StringP("subject", "s", "", "the subject of the email")
 	SendCmd.Flags().StringP("body", "b", "", "the body of the email")
-	SendCmd.Flags().StringP("type", "", "", "the type of the content body")
+	SendCmd.Flags().StringP("type", "p", "", "the type of the content body")
 	viper.BindPFlags(SendCmd.Flags())
 }
 
