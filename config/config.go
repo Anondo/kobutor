@@ -8,7 +8,7 @@ import (
 
 // Init initializes the config
 func Init() {
-	viper.SetConfigName("config")
+	viper.SetConfigName("kobutor_config")
 	viper.SetConfigType("yml")
 	viper.AddConfigPath(".")
 	if err := viper.ReadInConfig(); err != nil {
