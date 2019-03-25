@@ -5,7 +5,7 @@ app:
 sendgrid:
   host: https://api.sendgrid.com
   endpoint: /v3/mail/send
-  key: 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
+  key: "YOUR SENDGRID API KEY HERE"
 
 
 auth:

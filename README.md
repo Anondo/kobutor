@@ -10,6 +10,8 @@ Send an email with a simple ```POST``` request or even from your terminal!
 1. ```./kobutor server``` to start the server or,
 1. ```./kobutor send -f '{"name":"Anondo", "email":"aanondos@gmail.com"}' -t '{"name":"Ahmad Ananda","email":"ananda.anabil@pathao.com"}' -s "This is a test message" -b "<h4>Testing the kobutor service</h4>" --type=html ```
 
+**Important Note**: Before you can run the app, you need to generate a key for using the api of the sendgrid and add it to the key field under ```sendgrid``` in the ```kobutor_config.yml``` file. Also this app uses ```basic_auth``` as authorization so you need to add the credentials manually in the config file under the ```auth``` field. A default ```username=uname password=secret``` key-value pair is already provided. Follow that pattern. 
+
 ## Payload
 ```javascript
 {
@@ -36,8 +38,6 @@ Send an email with a simple ```POST``` request or even from your terminal!
 }
 
 ```
-
-Do not forget to add ```basic_auth```. See the ```kobutor_config.yml``` file.
 
 ## Commands
 
