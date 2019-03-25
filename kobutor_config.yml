@@ -1,0 +1,12 @@
+
+app:
+  port: 8080
+
+sendgrid:
+  host: https://api.sendgrid.com
+  endpoint: /v3/mail/send
+  key: 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
+
+
+auth:
+  uname: secret

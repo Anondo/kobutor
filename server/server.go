@@ -8,6 +8,7 @@ import (
 	"github.com/spf13/viper"
 )
 
+// Serve starts the kobutor server
 func Serve() error {
 	port := viper.GetInt("port")
 

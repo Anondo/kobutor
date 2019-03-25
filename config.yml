@@ -1,7 +1,0 @@
-
-app:
-  port: 8080
-
-sendgrid:
-  key: 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
-  

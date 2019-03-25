@@ -1,6 +1,7 @@
 package server
 
 import (
+	"kobutor/api"
 	"net/http"
 
 	"github.com/go-chi/chi"
@@ -29,15 +30,16 @@ func prepareRouter() {
 
 func registerRoutes() {
 	router.Route("/v1/", func(r chi.Router) {
-		r.Mount("/kobutor", resourceHandlers())
+		r.Mount("/kobutor", mailHandlers())
 	})
 
 }
 
-func resourceHandlers() http.Handler {
+func mailHandlers() http.Handler {
 	h := chi.NewRouter()
 	h.Group(func(r chi.Router) {
-
+		r.Use(api.BasicAuth)
+		r.Post("/", api.SendMail)
 	})
 
 	return h
