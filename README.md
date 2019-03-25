@@ -1,12 +1,12 @@
 # Kobutor
 
 **Kobutor** is a mailing service for sending emails to anyone from anyone! So far, it is using the
-![Sendgrid](https://sendgrid.com/) email delivery service api. I plan to integrate other services in the future as well.
+[Sendgrid](https://sendgrid.com/) email delivery service api. I plan to integrate other services in the future as well.
 Send an email with a simple ```POST``` request or even from your terminal!
 
 ## Running the app
 
-1. ![Download the app](https://github.com/Anondo/kobutor-bin.git)
+1. [Download the app](https://github.com/Anondo/kobutor-bin.git)
 1. ```./kobutor server``` to start the server or,
 1. ```./kobutor send -f '{"name":"Anondo", "email":"aanondos@gmail.com"}' -t '{"name":"Ahmad Ananda","email":"ananda.anabil@pathao.com"}' -s "This is a test message" -b "<h4>Testing the kobutor service</h4>" --type=html ```
 
